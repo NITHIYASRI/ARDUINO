@@ -1,0 +1,22 @@
+int led = 13;
+
+void setup()
+{
+  pinMode(2,INPUT);
+  for(int i=10;i<=led;i++)
+    pinMode(i,OUTPUT);
+}
+
+void loop()
+{
+  if(digitalRead(2)==HIGH)
+  {
+  for(int i=10;i<=led;i++)
+    digitalWrite(i,HIGH);
+  }
+  else
+  {
+  for(int i=10;i<=led;i++)
+    digitalWrite(i,LOW);
+  }
+}

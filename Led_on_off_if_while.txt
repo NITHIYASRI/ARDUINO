@@ -1,0 +1,21 @@
+int led = 13;
+bool on = HIGH;
+
+void setup()
+{
+  pinMode(2,INPUT);
+  for(int i=10;i<=led;i++)
+    pinMode(i,OUTPUT);
+}
+
+void loop()
+{
+  for(int i=10;i<=led;i++)
+    digitalWrite(i,on);
+
+  if(digitalRead(2))
+    {
+      while(digitalRead(2));
+      on = !on;
+    }
+}    
